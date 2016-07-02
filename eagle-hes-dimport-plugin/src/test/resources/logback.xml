@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <configuration debug="true" scan="true" scanPeriod="30 seconds"> effect performance -->
+<configuration debug="false">
+
+	<appender name="filetransfer" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>/data4/hadoop_logs/hes/filetransfer.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>/data4/hadoop_logs/hes/filetransfer.log.%i</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>5</MaxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger-%msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="access" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>/data4/hadoop_logs/hes/access.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+			<FileNamePattern>/data4/hadoop_logs/hes/access.log.%i</FileNamePattern>
+			<MinIndex>1</MinIndex>
+			<MaxIndex>5</MaxIndex>
+		</rollingPolicy>
+		<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+			<MaxFileSize>100MB</MaxFileSize>
+		</triggeringPolicy>
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger-%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<!-- 控制台输出日志 -->
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger[%line] -%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<root level="INFO">
+		<appender-ref ref="filetransfer" />
+		<appender-ref ref="STDOUT" />
+	</root>
+	
+	<logger name="io.netty.handler.logging" level="ERROR">
+		<appender-ref ref="access" />
+	</logger>
+	
+	<logger name="org.elasticsearch.plugins" level="ERROR"></logger>
+	
+</configuration>  
