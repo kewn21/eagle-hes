@@ -25,14 +25,6 @@
 		</fileSet>
 		
 		<fileSet>
-			<directory>assembly/conf</directory>
-        	<outputDirectory>/conf</outputDirectory>
-			<includes>
-				<include>*</include>
-			</includes>
-		</fileSet>
-		
-		<fileSet>
 			<directory>assembly/</directory>
         	<outputDirectory>/</outputDirectory>
 			<includes>
