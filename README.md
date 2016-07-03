@@ -26,6 +26,7 @@ mvn package
 #### original data with format
 * Each column is separated by the delimiter,when autogenerate.id is set to false, the first is id.
 * The others be separated by comma, the column name and value and type be together with a colon.
+
 #### meta file format
 * The definition of each column be separated by comma, the column name and type be together with a colon.
 
