@@ -1,5 +1,5 @@
 # hes-dimport
-hes-dimport is a elasticsearch plugin which create shards files of index in mapreduce.
+hes-dimport is a elasticsearch plugin which generate shards files of index in mapreduce.
 
 This plugin is applied to the offline import index, each import will generate an index, when used to define the template to organize these indexes together
 
@@ -8,7 +8,7 @@ This plugin is applied to the offline import index, each import will generate an
 * The throughput is linear increase when scale-out hadoop clusters.
 * The index is generated once, and can be pushed to shard primary and multiple shards replica.
 * Make the elasticsearch read and write separate,do not affect the performance of the read.
-* When there is a large volume of data written, you can use the relatively inexpensive hardware to extend the cluster, when you need a higher query QPS and low latency, you can use a better HW.
+* When there is a large volume of data written, you can use the relatively inexpensive hardware to extend the cluster, when you need a higher query qps and low latency, you can use a better HW.
 * Based on available of MapReduce job, the write is with HA.
 
 # How to use
