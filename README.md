@@ -22,12 +22,13 @@ mvn package
 ```./bin/plugin install eagle-hes.zip```
 ## mapreduce job
 ```hadoop jar HesDimportJob {-Dindex.name={index_name} -Dindex.type={index_type} [-Dautogenerate.id={true|false}]} [-Dfile={meta_file_path}] {input_file_path} [delimiter]```
-### You can describe the data format in the original data, or define the data in the metafile
-#### original data with format
+### metadata 
+You can describe the data format in the original data, or define the data in the metafile
+#### original data with metadata
 * Each column is separated by the delimiter,when autogenerate.id is set to false, the first is id.
 * The others be separated by comma, the column name and value and type be together with a colon.
 
-#### meta file format
+#### metadata format
 * The definition of each column be separated by comma, the column name and type be together with a colon.
 
 
