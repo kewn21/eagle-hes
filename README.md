@@ -23,7 +23,7 @@ mvn package
 ## install to elasticsearch
 ```./bin/plugin install eagle-hes-dimport-plugin-0.0.1.zip```
 ## mapreduce job
-```hadoop jar HesDimportJob {-Dindex.name={index_name} -Dindex.type={index_type} [-Dautogenerate.id={true|false}]} [-Dfile={meta_file_path}] {input_file_path} [delimiter]```
+```hadoop jar HesDimportJob {-Dindex.name={index_name}} {-Dindex.type={index_type}} [-Dautogenerate.id={true|false}] [-Dfile={meta_file_path}] {input_file_path} [delimiter]```
 ### metadata 
 You can describe the data format in the original data, or define in the metafile
 #### original data with metadata
