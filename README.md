@@ -1,7 +1,7 @@
 # hes-dimport
 hes-dimport is a elasticsearch plugin which generate shards files of index in mapreduce.
 
-This plugin is applied to the offline import index, each import will generate an index, when used to define the template to organize these indexes together.
+This plugin is applied to offline import index, each time will generate an index, so that you have to define the template to organize these indexes together.
 
 Support `Integer` and `Long` and `String` and `Double` and `Float` and `Short` data types.
 
@@ -28,9 +28,9 @@ mvn package
 You can describe the data format in the original data, or define in the metafile
 #### original data with metadata
 * Each column is separated by the delimiter,when property `autogenerate.id` is set to false, the first is for id.
-* The others be separated by `,`, the column name and value and type be together with a `:`.
+* The others be separated by `,`, the column name and value and type be together with `:`.
 
 #### metadata format
-* The definition of each column be separated by `,`, the column name and type be together with a `:`.
+* The definition of each column be separated by `,`, the column name and type be together with `:`.
 
 
