@@ -27,7 +27,7 @@ mvn package
 ### metadata 
 You can describe the data format in the original data, or define in the metafile
 #### original data with metadata
-* Each column is separated by the delimiter, when property `autogenerate.id` is set to false, the first is for id.
+* Each column is separated by the delimiter, when property `autogenerate.id` is set to false, the first column is for id.
 * Other columns be separated by `,`, the column name and value and type be together with `:`.
 
 #### metadata format
