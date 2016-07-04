@@ -1,9 +1,11 @@
 # hes-dimport
 hes-dimport is a elasticsearch plugin which generate shards files of index in mapreduce.
 
-This plugin is applied to the offline import index, each import will generate an index, when used to define the template to organize these indexes together
+This plugin is applied to the offline import index, each import will generate an index, when used to define the template to organize these indexes together.
 
-## Compared to bulk's load API elasticsearch, its advantages are below:
+Support `Integer` and `Long` and `String` and `Double` and `Float` and `Short` data types.
+
+Compared to bulk's load API elasticsearch, its advantages are below:
 * In a node that improves the write performance of 30%, when there is a large scale of Hadoop clusters, the overall write throughput is linearly increased.
 * The throughput is linear increase when scale-out hadoop clusters.
 * The index is generated once, and can be pushed to shard primary and multiple shards replica.
@@ -19,7 +21,7 @@ cd eagle-hes
 mvn package
 ```
 ## install to elasticsearch
-```./bin/plugin install eagle-hes.zip```
+```./bin/plugin install eagle-hes-dimport-plugin-0.0.1.zip```
 ## mapreduce job
 ```hadoop jar HesDimportJob {-Dindex.name={index_name} -Dindex.type={index_type} [-Dautogenerate.id={true|false}]} [-Dfile={meta_file_path}] {input_file_path} [delimiter]```
 ### metadata 
