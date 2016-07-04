@@ -8,7 +8,7 @@ Support `Integer` and `Long` and `String` and `Double` and `Float` and `Short` d
 Compared to bulk's load API elasticsearch, its advantages are below:
 * In a node that improves the write performance of 30%, when there is a large scale of Hadoop clusters, the overall write throughput is linearly increased.
 * The throughput is linear increase when scale-out hadoop clusters.
-* The index is generated once, and can be pushed to shard primary and multiple shards replica.
+* The index is generated once, and can be pushed to shard primary and multiple shards replicas.
 * Make the elasticsearch read and write separate,do not affect the performance of the read.
 * When there is a large volume of data written, you can use the relatively inexpensive hardware to extend the cluster, when you need a higher query qps and low latency, you can use a better HW.
 * Based on available of MapReduce job, the write is with HA.
